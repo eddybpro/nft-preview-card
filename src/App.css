@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --color-blue-primary: hsl(215, 51%, 70%);
+  --color-cyan-primary: hsl(178, 100%, 50%);
+  --color-cyan-bg: hsla(178, 100%, 50%, 0.5);
+
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+  --outfit-font: "Outfit", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#root {
+  padding: 2rem 0;
+  min-height: 100vh;
+  font-family: var(--outfit-font);
+  font-display: optional;
+  background-color: var(--main-BG);
+}
+
+main {
+  width: 88%;
+  max-width: 40rem;
+  background-color: var(--card-BG);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.imgs-container {
+  background: url("./assets/image-equilibrium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.view {
+  opacity: 0;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imgs-container:hover {
+  box-shadow: inset 0 0 0 1000px var(--color-cyan-bg);
+}
+
+.imgs-container:hover .view {
+  opacity: 1;
+}
+
+.txt-container {
+  margin-top: 2rem;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.title:hover {
+  color: var(--color-cyan-primary);
+}
+
+.para {
+  font-size: 1.6rem;
+  color: var(--color-blue-primary);
+  font-weight: 300;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.val-box > img {
+  width: 1.25rem;
+  height: 2rem;
+}
+
+.val-box > strong {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: var(--color-cyan-primary);
+  text-transform: uppercase;
+  margin-left: 0.66rem;
+  font-weight: 500;
+  transform: translateY(-0.3rem);
+}
+
+.time-box > p {
+  display: inline-block;
+  color: var(--color-blue-primary);
+  font-size: 1.6rem;
+  margin-left: 0.66rem;
+  transform: translateY(-0.5rem);
+}
+
+.time-box > img {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--line-color);
+  margin-bottom: 1.5rem;
+}
+
+.user-box {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.img-box {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  background-color: var(--color-white);
+}
+
+.user-img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-name {
+  font-size: 1.6rem;
+  color: var(--color-blue-primary);
+}
+
+.user-name > span {
+  color: var(--color-white);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.user-name > span:hover {
+  color: var(--color-cyan-primary);
+}
